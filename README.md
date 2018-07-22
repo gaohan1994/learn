@@ -68,6 +68,9 @@ console.log('cat1.toString === cat2.toString', cat1.toString === cat2.toString);
 
 ---
 
+继承 by 高程
+
+
 [构造器模式](https://www.w3cschool.cn/zobyhd/467ndozt.html)
 
 
