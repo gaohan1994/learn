@@ -28,7 +28,7 @@ AnimalES5.prototype = {
 
 var cat = new AnimalES5('Gas', 11, 'cat');
 
-cat.toString();
+// cat.toString();
 
 /**
  * ES6
@@ -49,10 +49,10 @@ class AnimalES6 {
 var cat1 = new AnimalES6('Gas', 11, 'cat');
 var cat2 = new AnimalES6('gda', 12, 'cat');
 
-cat1.toString();
-cat2.toString();
+// cat1.toString();
+// cat2.toString();
 
-console.log('cat1.toString === cat2.toString', cat1.toString === cat2.toString);
+// console.log('cat1.toString === cat2.toString', cat1.toString === cat2.toString);
 
 /**
  * 演变过程 ES5
@@ -163,7 +163,7 @@ function PersonCb (name, age, job) {
      * mater code
     */
     if (typeof this.sayName !== 'function') {
-        console.log('constructor function');
+        // console.log('constructor function');
         PersonCb.prototype.sayName = function () {
             console.log(this.name);
         }
@@ -175,15 +175,21 @@ var pcb2 = new PersonCb('ghh', 22, 'das');
 // pcb1.sayName();
 // pcb2.sayName();
 
+function PersonES5 (name) {
+    this.name = name;
+}
 
+PersonES5.prototype.sayName = function () {
+    console.log(`my ES5 name: `, this.name);
+}
 
+var pes51 = new PersonES5('Ghan');
+pes51.sayName();
 
+console.log('pes51.__proto__ === PersonES5.prototype: ', pes51.__proto__ === PersonES5.prototype);
+console.log('pes51.constructor === Person: ', pes51.constructor === Person);
 
-
-
-
-
-
+// console.log(pes51.prototype === Person);
 
 
 
