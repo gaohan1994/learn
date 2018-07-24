@@ -203,10 +203,9 @@ anotherPerson2.sayName();
 
 /**
  * 
- * 寄生组合式继承
- * 
  * 组合继承是最常用的继承方式,但是缺点是无论什么情况下，都会调用
  * 两次超类型构造函数
+ * 
 */
 
 function SuperType () {
@@ -230,6 +229,18 @@ SubType.prototype.constructor = SuperType;
 
 SubType.prototype.sayAge = function () {
     console.log(this.age);
+}
+
+/**
+ * 
+ * 寄生组合式继承
+ * 使用寄生式继承来继承超类型的原型，然后再将结果指定给子类型的原型
+*/
+
+function inheritPrototype (subType, superType) {
+    var prototype = Object.create(superType.prototype); // 创建对象
+    prototype.constructor = subType; // 增强对象
+    subType.prototype = prototype; // 指定对象
 }
 
 
