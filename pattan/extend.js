@@ -8,6 +8,67 @@
  * ES5
 */
 
+function inheritanceES5 (subType, superType) {
+    var prototype = superType.prototype;
+    prototype.constructor = subType;
+    subType.prototype = prototype;
+}
+
+function SuperTypeES5 () {
+    this.name = 'Ghan';
+}
+
+SuperTypeES5.prototype.sayName = function () {
+    console.log(this.name);
+}
+
+function SubTypeES5 (age) {
+    this.age = age;
+}
+
+inheritanceES5(SubTypeES5, SuperTypeES5);
+
+SubTypeES5.prototype.sayAge = function () {
+    console.log(this.age);
+}
+
+var instanceES5 = new SubTypeES5(23);
+
+instanceES5.sayName();
+instanceES5.sayAge();
+
+
+/**
+ * ES6
+*/
+
+class SuperTypeES6 {
+    constructor () {
+        this.name = 'Ghan'
+    }
+
+    sayName () {
+        console.log(this.name);
+    }
+}
+
+class SubTypeES6 extends SuperTypeES6 {
+    constructor (age) {
+        super();
+        this.age = age;
+    }
+
+    sayAge () {
+        console.log(this.age);
+    }
+}
+
+var instanceES6 = new SubTypeES6(11);
+
+instanceES6.sayName();
+instanceES6.sayAge();
+
+
 /**
  * 演变过程ES5
 */

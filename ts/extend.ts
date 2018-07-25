@@ -1,3 +1,5 @@
+import Ad from './obj'; 
+
 class Stype {
 
     public name;
@@ -7,6 +9,7 @@ class Stype {
     }
 
     sayName() {
+        const fields = Ad.fields;
         console.log(this.name);
     }
 }

@@ -99,6 +99,106 @@ SubType.prototype.sayAge = function () {
 
 但是这种模式有一个缺点就是继承的时候调用了两次超类型的构造函数
 
+```javascript
+
+function inheritPrototype (subType, superType) {
+    var prototype = object.create(superType.prototype);
+    prototype.constructor = subType;
+    subType.prototype = prototype;
+}
+
+function SuperType () {
+    this.name = 'Ghan';
+}
+
+SuperType.prototype.sayName = function () {
+    console.log(this.name);
+}
+
+function SubType (age) {
+    this.age = age;
+}
+
+// 一次
+inheritPrototype(SubType, SuperType);
+
+SubType.prototype.sayAge = function () {
+    console.log(this.age);
+}
+
+```
+
+最终最优方法：
+
+```javascript
+
+/**
+ * ES5
+*/
+
+function inheritanceES5 (subType, superType) {
+    var prototype = superType.prototype;
+    prototype.constructor = subType;
+    subType.prototype = prototype;
+}
+
+function SuperTypeES5 () {
+    this.name = 'Ghan';
+}
+
+SuperTypeES5.prototype.sayName = function () {
+    console.log(this.name);
+}
+
+function SubTypeES5 (age) {
+    this.age = age;
+}
+
+inheritanceES5(SubTypeES5, SuperTypeES5);
+
+SubTypeES5.prototype.sayAge = function () {
+    console.log(this.age);
+}
+
+var instanceES5 = new SubTypeES5(23);
+
+instanceES5.sayName();
+instanceES5.sayAge();
+
+
+/**
+ * ES6
+*/
+
+class SuperTypeES6 {
+    constructor () {
+        this.name = 'Ghan'
+    }
+
+    sayName () {
+        console.log(this.name);
+    }
+}
+
+class SubTypeES6 extends SuperTypeES6 {
+    constructor (age) {
+        super();
+        this.age = age;
+    }
+
+    sayAge () {
+        console.log(this.age);
+    }
+}
+
+var instanceES6 = new SubTypeES6(11);
+
+instanceES6.sayName();
+instanceES6.sayAge();
+
+```
+
+
 [构造器模式](https://www.w3cschool.cn/zobyhd/467ndozt.html)
 
 
