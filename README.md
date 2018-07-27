@@ -201,4 +201,15 @@ instanceES6.sayAge();
 
 [构造器模式](https://www.w3cschool.cn/zobyhd/467ndozt.html)
 
+### 2.学习BOM
+
+> 学习资源：
+> <br/> 
+> 《Javascript高级程序设计》第六章面向对象的程序设计
+
+BOM：浏览器对象模型
+
+BOM的核心对象是 window 它代表浏览器的一个实例。在浏览器中，
+window对象有双重角色，它是通过Javascript访问浏览器窗口的
+一个接口，又是ESMAScript规定的Global对象
 

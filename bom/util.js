@@ -1,0 +1,37 @@
+/**
+ * 格式化 location ? 之后的参数
+ *
+ * @returns
+ */
+function getQueryStringArgs () {
+    var qs = (location.search.length > 0 ? location.search.substring(1) : ''),
+        args = {},
+        items = qs.length ? qs.split("&") : [],
+        item = null,
+        name = null,
+        value = null,
+        i = 0,
+        len = item.length;
+
+    for (i = 0; i < len; i++) {
+        item = items[i].split('=');
+        name = decodeURIComponent(item[0]);
+        value = decodeURIComponent(item[1]);
+
+        if (name.length) {
+            args[name] = value;
+        }
+    }
+
+    return args;
+}
+
+function hasPlugin (name) {
+    name = name.toLowerCase();
+    var len = navigator.plugins.length;
+    for (var i = 0; i < len; i++) {
+        if (navigator.plugins[i].name.toLowerCase().indexOf(name)) {
+
+        }
+    }
+}

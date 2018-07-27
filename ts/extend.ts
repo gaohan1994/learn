@@ -1,4 +1,3 @@
-import Ad from './obj'; 
 
 class Stype {
 
@@ -9,7 +8,6 @@ class Stype {
     }
 
     sayName() {
-        const fields = Ad.fields;
         console.log(this.name);
     }
 }

@@ -1,0 +1,29 @@
+<html>
+<body>
+    <div>index</div>
+<script>
+    var age = 29;
+
+    function sayAge () {
+        console.log(this.age);
+    }
+
+    console.log(window.age);
+
+    // 下面代码返回页面视口的大小
+
+    var pageWidth = window.innerWidth,
+        pageHeight = window.innerHeight;
+
+    if (typeof pageWidth != 'number') {
+        if (document.compatModa == 'CSS1Compat') {
+            pageWidth = document.documentElement.clientWidth;
+            pageHeight = document.documentElement.clientHeight;
+        } else {
+            pageWidth = document.body.clientWidth;
+            pageHeight = document.body.clientHeight;
+        }
+    }
+</script>
+</body>
+</html>
