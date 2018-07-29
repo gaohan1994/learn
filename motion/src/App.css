@@ -1,28 +1,67 @@
-.App {
-  text-align: center;
+
+
+.test {
+  position: absolute;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Head {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #eee;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.Head-ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 3px solid white;
+  position: absolute;
 }
 
-.App-title {
-  font-size: 1.5em;
+.ball-0 {
+  background: yellow;
 }
 
-.App-intro {
-  font-size: large;
+.ball-1 {
+  background: black;
+}
+.ball-2 {
+  background: yellow;
+}
+.ball-3 {
+  background: black;
+}
+.ball-4 {
+  background: yellow;
+}
+.ball-5 {
+  background: black;
+}
+.ball-6 {
+  background: yellow;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+.main-button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.button {
+  border-radius: 100%;
+  background: yellow;
+}
+
+.child-body {
+  position: absolute;
+  bottom: 10px;
+}
+
+.child-button {
+  position: absolute;
+  background: black;
+  border-radius: 100%;
 }
