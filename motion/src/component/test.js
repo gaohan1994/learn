@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { range } from 'lodash';
 import { Motion, StaggeredMotion, spring } from 'react-motion';
 
+/**
+ * Q哥项目按钮
+*/
+
 const BUTTON_SIZE = 50;
 
 const SPRING_CONFIG = { stiffness: 500, damping: 30 };
@@ -37,7 +41,7 @@ export default class Col extends Component {
             bottom: 0,
             rotate: -180,
             scale: 0.5,
-        }
+        };
     }
 
     initialChildButtonStylesInit = () => {
@@ -47,7 +51,7 @@ export default class Col extends Component {
             bottom: spring(0, SPRING_CONFIG),
             rotate: spring(-180, SPRING_CONFIG),
             scale: spring(0.5, SPRING_CONFIG),
-        }
+        };
     }
 
     finalChildButtonStyles = (index) => {
@@ -58,7 +62,7 @@ export default class Col extends Component {
             bottom: spring(index * (BUTTON_SIZE + 20), SPRING_CONFIG),
             rotate: spring(0, SPRING_CONFIG),
             scale: spring(1, SPRING_CONFIG),
-        }
+        };
     }
 
     renderChildButtons = () => {
@@ -66,7 +70,7 @@ export default class Col extends Component {
 
         const targetButtonStylesInitObject = range(4).map(i => {
             return isOpen ? this.finalChildButtonStyles(i) : this.initialChildButtonStyles()
-        })
+        });
 
         const targetButtonStylesInit = Object.keys(
             targetButtonStylesInitObject).map(
@@ -86,7 +90,7 @@ export default class Col extends Component {
             });
 
             return nextFrameStyles;
-        }
+        };
 
         return (
             <StaggeredMotion

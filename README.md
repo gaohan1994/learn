@@ -2,12 +2,15 @@
 
 ---
 
-### 1.学习Javascript设计模式
+## 目录
+- [Learn Javascript Patton](#learn-javascript-patton)
+- [Learn React Motion](#learn-react-motion)
 
-> 学习资源：
-> <br/> 
-> 《Javascript高级程序设计》第六章面向对象的程序设计
-> <br/>
+
+## Learn Javascript Patton
+
+> 学习资源：<br/>
+> 《Javascript高级程序设计》第六章面向对象的程序设计<br/>
 > [w3cschool](https://www.w3cschool.cn/zobyhd/467ndozt.html)
 
 工厂模式最佳方法之组合模式 by 高程
@@ -165,7 +168,6 @@ var instanceES5 = new SubTypeES5(23);
 instanceES5.sayName();
 instanceES5.sayAge();
 
-
 /**
  * ES6
 */
@@ -198,18 +200,23 @@ instanceES6.sayAge();
 
 ```
 
-
 [构造器模式](https://www.w3cschool.cn/zobyhd/467ndozt.html)
 
-### 2.学习BOM
+## Learn React Motion
 
-> 学习资源：
-> <br/> 
-> 《Javascript高级程序设计》第六章面向对象的程序设计
+> 学习资源: <br/>
+> [react-motion](https://github.com/chenglou/react-motion)<br/>
+> [关于 React Motion的简要介绍](https://juejin.im/post/5b48061551882519790c77f3)
 
-BOM：浏览器对象模型
+``react-motion``库，可以根据``react state``来控制``css``。
 
-BOM的核心对象是 window 它代表浏览器的一个实例。在浏览器中，
-window对象有双重角色，它是通过Javascript访问浏览器窗口的
-一个接口，又是ESMAScript规定的Global对象
+`` spring``API接收2个参数，第一个是目标数值，第二个是配置选项。
 
+``Motion``API主要接收2个参数``defaultStyle``和``style``，其中``style``属性将会给``Motion``的子组件继承，在``Motion``的子组件内就能根据``style``中的属性进行操作了。
+
+``StaggeredMotion``API和``Motion``差不多，和``Motion``的不用点在于``StaggeredMotion``可以接收多个``style``参数。
+
+``motion.js``内将展示我从``react-motion``官方``demo``学习之后，自己仿照写的几个``demo``.
+
+
+1.
