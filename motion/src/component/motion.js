@@ -20,6 +20,7 @@ class Simple extends Component {
 
     render () {
         const { open } = this.state;
+        
         const motionStyle = open === true
             ? spring(10)
             : spring(0)

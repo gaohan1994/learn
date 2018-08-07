@@ -65,3 +65,31 @@
   background: black;
   border-radius: 100%;
 }
+
+.target {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: yellowgreen;
+}
+
+.body {
+  height: 100vh;
+}
+
+.flyBall {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: skyblue;
+}
+
+.cart-item {
+  position: relative;
+  text-align: right;
+  right: 20px;
+  margin-top: 20px;
+}
