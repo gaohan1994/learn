@@ -73,9 +73,8 @@ export default class Col extends Component {
         });
 
         const targetButtonStylesInit = Object.keys(
-            targetButtonStylesInitObject).map(
-                key => targetButtonStylesInitObject[key]
-        );
+            targetButtonStylesInitObject
+        ).map(key => targetButtonStylesInitObject[key]);
 
         const calculateStylesFroNextFrame = prevFrameStyles => {
 

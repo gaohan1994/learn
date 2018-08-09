@@ -5,6 +5,7 @@
 ## 目录
 - [Learn Javascript Patton](#learn-javascript-patton)
 - [Learn React Motion](#learn-react-motion)
+- [Learn Typescript](#learn-typescript)
 
 
 ## Learn Javascript Patton
@@ -220,3 +221,38 @@ instanceES6.sayAge();
 
 
 1.
+
+
+## Learn Typescript
+
+> 学习资源： https://www.tslang.cn/docs/handbook/generics.html
+
+``typescript`` 泛型 ``ts/type.ts``
+
+```javascript
+
+/**
+ * 接收一个数据类型T
+ * 接收一个参数arg arg的数据类型是T
+ * 返回一个数据 数据类型是T
+ */
+function identity<T>(arg: T): T {
+    return arg;
+}
+```
+
+``typescript`` 泛型接口
+
+```javascript
+
+function identity<T>(arg: T): T {
+    return arg;
+}
+
+
+
+/**
+ * es6
+*/
+
+```

@@ -38,7 +38,7 @@ class Index extends Component {
                     ))
                 }
 
-                <div ref={r => this.r = r} className="target"></div>
+                <div className="target"></div>
             </div>
         )
     }
